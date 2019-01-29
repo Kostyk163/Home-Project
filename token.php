@@ -1,8 +1,6 @@
 <?php
 
-$access = [
-  'friends', 'messages', 'ads' , 'groups'
-];
+$access = ['friends', 'messages', 'ads' , 'groups'];
 
 $request_params = [
     'client_id'     => '6833752',
@@ -14,5 +12,4 @@ $request_params = [
 ];
 
 $url = "https://oath.vk.com/authorize?" . http_build_query($request_params);
-
 echo $url;
