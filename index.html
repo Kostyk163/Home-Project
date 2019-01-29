@@ -4,30 +4,35 @@
 
     <title>Сайт №1 в Мире!</title>
 </head>
-<h1>Меню</h1>
-<!-- Меню -->
-<?php
-include 'menu.php';
-?>
-<ul>
-    <li><a href='<?php echo $menu[0]['href']?>'><?php echo $menu[0]['link']?></a></li>
-    <li><a href='<?php echo $menu[1]['href']?>'><?php echo $menu[1]['link']?></a></li>
-    <li><a href='<?php echo $menu[2]['href']?>'><?php echo $menu[2]['link']?></a></li>
-    <li><a href='<?php echo $menu[3]['href']?>'><?php echo $menu[3]['link']?></a></li>
-</ul>
-<!-- Меню -->
+<h1>Ключ доступа</h1>
 <body>
+
+<?php
+include ('token.php' , 'messages_send.php');
+?>
+
+<form action = "token.php" method = "post" target = "_blank">
+    <input name="" type="submit" value="Получить ключ" />
+</form>
+
 <div>
-    <p>Лучший в мире календарь напоминаний!</p>
+    <h2>Авторизация</h2>
+<form action="messages_send.php" method = "GET">
+Введите ключ доступа: <input type = "text" name = "token">
+                      <input type = "submit" value = "Send" />
+</form>
+
 </div>
 <div>
-    <h2>Ы</h2>
-    <p>Бла Бла Бла</p>
+    <h3>Сообщение</h3>
+
+<form action="messages_send.php" method = "GET">
+Сообщение: <input type = text name = "message">
+           <input type = "submit" value = "Send">
+</form>
+
 </div>
-<div>
-    <h3>Гы</h3>
-    <p>Бла Бла Бла</p>
-</div>
+
 <div id="footer">
     <!-- Нижняя часть страницы -->
     &copy; Konstantin The Best Programmer 2019
